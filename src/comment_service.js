@@ -17,7 +17,6 @@ class CommentService {
     }
 
     createComments(){
-        debugger
         const commentInfo = {
             comment: {
                 title: titleValue.value,
@@ -25,9 +24,10 @@ class CommentService {
                 pokemon_id: dropDown.value
             }
         }
+        // debugger
+
         fetch(this.port + `/comments`)
         .then(response => response.json())
         .then(data => console.log(data))
-        // debugger
     }
 }
