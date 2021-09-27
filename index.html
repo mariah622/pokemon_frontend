@@ -5,17 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div id='comment-form'>
+        <h1>Create Comment:</h1>
+        <form id='comment-form'>
+            <label for="comment-title">Title:</label>
+            <input type='text' name='title' id='comment-title'/>
+            <br>
+            <label for="comment-description">Description:</label>
+            <input type='text' name='description' id='comment-description'/>
+            <br>
+
+            
+            <!-- <input type='text' name='pokemon' id='pokemon-name'>
+            <input type='text' name='pokemon' id='pokemon-move'>
+            <input type='text' name='pokemon' id='pokemon-ability'> -->
+            <select name='pokemon_id' id='pokemon_dropdown'>
+
+            </select>
+            <br>
+            <input type='submit' value='Create Comment'/>
+
+        </form>
+    </div>
+
+    <div id='pokemon'></div>
+    <div id="comments-cont"></div>
+    
     <script src='src/comment.js'></script>
     <script src='src/comment_service.js'></script>
     <script src='src/pokemon.js'></script>
     <script src='src/pokemon_service.js'></script>
     <script src='index.js'></script>
 
-    <div id='comment-form'></div>
-    <div id='pokemon'></div>
-    <div id='comments'></div>
     
 
     
