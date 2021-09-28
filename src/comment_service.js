@@ -25,9 +25,19 @@ class CommentService {
             }
         }
         // debugger
-
-        fetch(this.port + `/comments`)
+        const configObject = {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify(commentInfo)
+        }
+        fetch(this.port + `/comments`, configObject)
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => {
+            const c = new Comment(data)
+            c.attachToDom()
+        })
     }
 }
