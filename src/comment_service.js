@@ -59,11 +59,7 @@ class CommentService {
         }
 
         fetch(this.port + `/comments/${id}`, configObject)
-        .then(response => response.json())
-        .then(data => {
-            // const c = new Comment(data)
-            comment.render()
-        })
+        .then(response => {comment.render()})
 
     }
 
