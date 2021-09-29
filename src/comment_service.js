@@ -60,6 +60,7 @@ class CommentService {
 
         fetch(this.port + `/comments/${id}`, configObject)
         .then(response => {comment.render()})
+        
 
     }
 
