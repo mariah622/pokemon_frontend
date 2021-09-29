@@ -49,6 +49,7 @@ class Comment {
     handleClick = (e) => {
         if(e.target.innerText === "Edit Comment"){
             console.log(e.target)
+            e.target.innerText = "Save Comment"
             this.createEditForm()
 
             // e.target.innerText = "Save Comment"
@@ -58,7 +59,7 @@ class Comment {
             // console.log(e.target)
             // commentCall.deleteComment(e)
         }else if(e.target.innerText === "Save Comment"){
-            // console.log("save works")
+            console.log("save works")
             // e.target.innerText = "Edit Comment"
             // this.updatedItemInfo()
         }
