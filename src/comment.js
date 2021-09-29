@@ -60,9 +60,17 @@ class Comment {
             // commentCall.deleteComment(e)
         }else if(e.target.innerText === "Save Comment"){
             console.log("save works")
-            // e.target.innerText = "Edit Comment"
-            // this.updatedItemInfo()
+            e.target.innerText = "Edit Comment"
+            this.updatedCommentInfo()
+
+           
         }
+    }
+
+    updatedCommentInfo() {
+        this.title = this.element.querySelector('.edit-title').value;
+        this.description = this.element.querySelector('.edit-description').value;
+        commentCall.updateComment(this)
     }
 
 

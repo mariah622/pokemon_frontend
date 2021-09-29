@@ -40,4 +40,8 @@ class CommentService {
             c.attachToDom()
         })
     }
+
+    updateComment(comment){
+        debugger 
+    }
 }
