@@ -51,13 +51,11 @@ class Comment {
             console.log(e.target)
             e.target.innerText = "Save Comment"
             this.createEditForm()
-
-            // e.target.innerText = "Save Comment"
     
             // debugger
         }else if(e.target.innerText === "X"){
-            // console.log(e.target)
-            // commentCall.deleteComment(e)
+            console.log(e.target)
+            commentCall.deleteComment(e)
         }else if(e.target.innerText === "Save Comment"){
             console.log("save works")
             e.target.innerText = "Edit Comment"

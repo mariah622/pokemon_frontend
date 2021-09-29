@@ -66,4 +66,15 @@ class CommentService {
         })
 
     }
+
+    deleteComment(e) {
+        const id = e.target.dataset.id
+        e.target.parentElement.remove()
+
+        fetch(this.port + `/comments/${id}`, {method: 'DELETE'})
+        .then(response => response.json())
+        .then(json => alert(json.message))
+    
+    }
+    
 }
