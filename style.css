@@ -1,11 +1,9 @@
 body {
     background: url("https://i.imgur.com/lAsI3ml_d.webp?maxwidth=1520&fidelity=grand");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-
-    font-family: Algerian;
+    font-family: Monospace;
 
 }
 
@@ -43,3 +41,9 @@ p {
 
 }
 
+.float-child {
+    width: 45%;
+    float: left;
+    padding: 20px;
+    border: 2px solid white;
+} 

@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div id='pokemon-form'>
+    <div id='pokemon-form' class='float-child'>
         <h1>Create a Pokemon:</h1>
         <form id='pokemon-form'>
 
@@ -36,11 +35,10 @@
 
 
         </form>
+        <div id='pokemon-cont'></div>
     </div>
 
-    <div id='pokemon-cont'></div>
-
-    <div id='comment-form'>
+    <div id='comment-form' class='float-child'>
         <form id='comment-form'>
 
             <h1>Create Comment:</h1>
@@ -58,9 +56,14 @@
             <br>
             <input type='submit' value='Create Comment'/>
 
+            <hr>
+
         </form>
+        <div id="comments-cont"></div>
     </div>
-    <div id="comments-cont"></div>
+    </div>
+   
+
     
     <script src='src/comment.js'></script>
     <script src='src/comment_service.js'></script>
