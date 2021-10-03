@@ -27,6 +27,10 @@ p {
     color: white
 }
 
+#pokemon-form {
+    color: white
+}
+
 #pokemon_dropdown {
     background-color: #4CAF50; /* Green */
     border: none;

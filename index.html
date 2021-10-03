@@ -9,25 +9,35 @@
 </head>
 <body>
 
-    <div id='comment-form'>
+    <div id='pokemon-form'>
         <h1>Create a Pokemon:</h1>
-        <form id='comment-form'>
+        <form id='pokemon-form'>
 
 
-            <label for="comment-title">Name:</label>
+            <label for="pokemon-name">Name:</label>
             <input type='text' name='pokemon' id='pokemon-name'>
 
             <br>
 
-            <label for="comment-title">Move:</label>
+            <label for="pokemon-move">Move:</label>
             <input type='text' name='pokemon' id='pokemon-move'>
 
             <br>
 
-            <label for="comment-title">Ability:</label>
+            <label for="pokemon-ability">Ability:</label>
             <input type='text' name='pokemon' id='pokemon-ability'>
+            
+
+            <input type='submit' value='Create Pokemon'/>
 
             <hr>
+
+
+        </form>
+    </div>
+
+    <div id='comment-form'>
+        <form id='comment-form'>
 
             <h1>Create Comment:</h1>
 
@@ -38,9 +48,6 @@
             <input type='text' name='description' id='comment-description'/>
             <br>
 
-
-           
-           
             <select name='pokemon_id' id='pokemon_dropdown'>
 
             </select>
@@ -50,7 +57,7 @@
         </form>
     </div>
 
-    <div id='pokemon'></div>
+    <div id='pokemon-cont'></div>
     <div id="comments-cont"></div>
     
     <script src='src/comment.js'></script>
