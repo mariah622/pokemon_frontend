@@ -7,16 +7,19 @@ const pokemonForm = document.getElementById('pokemon-form')
 const dropDown = document.getElementById('pokemon_dropdown')
 
 
+const nameValue = document.getElementById('pokemon-name')
+const moveValue = document.getElementById('pokemon-move')
+const abilityValue = document.getElementById('pokemon-ability')
+
 const titleValue = document.getElementById('comment-title')
 const descriptionValue = document.getElementById('comment-description')
-
 
 commentCall.getComments()
 pokemonCall.getPokemons()
 
 
 commentForm.addEventListener('submit', submitComments)
-// pokemonForm.addEventListener('submit', handleSubmit)
+pokemonForm.addEventListener('submit', submitPokemons)
 
 
 function submitComments(e) {
@@ -29,8 +32,8 @@ function submitComments(e) {
 
 }
 
-// function handleSubmit(e) {
-//     e.preventDefault
-//     pokemonCall.createPokemons()
-//     debugger
-// }
+function submitPokemons(e) {
+    e.preventDefault();
+    pokemonCall.createPokemons()
+}
+
