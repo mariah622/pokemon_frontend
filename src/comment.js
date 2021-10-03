@@ -8,7 +8,7 @@ class Comment {
         this.id = id 
         this.title = title
         this.pokemon_id = pokemon_id
-        // this.pokemon = pokemon
+        this.pokemon = pokemon
         this.element = document.createElement('li');
         this.element.dataset['id'] = id;
         this.element.id = `comment-${id}`;

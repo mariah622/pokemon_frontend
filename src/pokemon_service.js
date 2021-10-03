@@ -11,25 +11,27 @@ class PokemonService {
                 const p = new Pokemon(element)
                 // pokemon object
                 p.addToDropDown()
+                p.attachToDom()
 
 
             })
             
         })
     }
+    
+    // getPokemons() {
+    //     fetch(this.port + `/pokemons`)
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         for(const pokemon of data){
+    //             let p = new Pokemon(pokemon)
+    //             p.attachToDom()
+    //         }
 
-    getPokemonss() {
-        fetch(this.port + `/pokemons`)
-        .then(response => response.json())
-        .then(data => {
-            for(const pokemon of data){
-                let p = new Pokemon(pokemon)
-                p.attachToDom()
-            }
-        })
-        .catch()
+    //     })
+    //     .catch()
 
-    }
+    // }
 
     createPokemons(){
         const pokemonInfo = {
@@ -59,7 +61,7 @@ class PokemonService {
     updatePokemon(pokemon){
         // destructuring (destructuring is smart. I do not have to write title: title)
         const {name, move, ability, id} = pokemon
-        const PokemonInfo = {
+        const pokemonInfo = {
             name, 
             move, 
             ability

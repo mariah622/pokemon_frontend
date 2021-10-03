@@ -19,7 +19,7 @@ class Pokemon {
 
     render(){
         this.element.innerHTML = `
-        <li data-id="${this.id}">
+        <div data-id="${this.id}">
         <h2 class="name">${this.name}</h2>
         <p class="move">${this.move}</p>
         <p class="ability">${this.ability}</p>
@@ -53,11 +53,11 @@ class Pokemon {
             // debugger
         }else if(e.target.innerText === "X"){
             console.log(e.target)
-            commentCall.deleteComment(e)
+            pokemonCall.deletePokemons(e)
         }else if(e.target.innerText === "Save Pokemon"){
             console.log("save works")
             e.target.innerText = "Edit Pokemon"
-            this.updatedCommentInfo()
+            this.updatedPokemonInfo()
 
            
         }
