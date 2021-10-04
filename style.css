@@ -1,9 +1,9 @@
 body {
-    background: url("https://i.imgur.com/lAsI3ml_d.webp?maxwidth=1520&fidelity=grand");
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700156667.jpg") no-repeat center fixed;
     background-size: cover;
-    font-family: Monospace;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+ 
 
 }
 
@@ -30,9 +30,9 @@ p {
 }
 
 #pokemon_dropdown {
-    background-color: #4CAF50; /* Green */
+    background-color: white; /* Green */
     border: none;
-    color: white;
+    color: #7eb4e2;
     padding: 10px 27px;
     text-align: center;
     text-decoration: none;
@@ -41,9 +41,64 @@ p {
 
 }
 
-.float-child {
-    width: 45%;
-    float: left;
-    padding: 20px;
-    border: 2px solid white;
-} 
+#pokemon-form {
+    background: #7eb4e2;
+    background-clip: padding-box;
+    border: 10px solid hsla(0,0%,100%,.5);
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  
+}
+
+#comment-form {
+    background: #7eb4e2;
+    background-clip: padding-box;
+    border: 10px solid hsla(0,0%,100%,.5);
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  
+  
+}
+
+
+.edit {
+    transition-duration: 0.4s;
+    border-radius: 12px;
+    font-family: monospace;
+    background-color: #8bc6fa;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.edit:hover {
+    background-color: #588dbb;
+    color: black;
+}
+
+.edit:active {
+    background-color: #7eb4e2;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.delete {
+    transition-duration: 0.4s;
+    border-radius: 12px;
+    font-family: monospace;
+    background-color: rgb(241, 76, 76);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.delete:hover {
+    background-color: rgb(190, 53, 53);
+    color: black;
+}
+
+.delete:active {
+    background-color: rgb(190, 53, 53);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
