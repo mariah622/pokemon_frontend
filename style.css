@@ -5,31 +5,17 @@ body {
     color: white
 }
 
- 
+.header {
+    text-align: center;
+    background: rgb(255, 95, 95);
+    color: white;
+    font-size: 30px;
 
-
-
-
-/* h1 {
-    color: white
+    border: 10px solid hsla(0,0%,100%,.5);
+    margin: auto;
+    width: 50%;
+    padding: 10px;
 }
-
-
-h2 {
-    color: white
-}
-
-p {
-    color: white
-}
-
-#comment-form {
-    color: white
-}
-
-#pokemon-form {
-    color: white
-} */
 
 #pokemon_dropdown {
     background-color: white; /* Green */
@@ -105,6 +91,20 @@ p {
     transform: translateY(4px);
 }
 
+.w3-button {
+    transition-duration: 0.4s;
+    border-radius: 12px;
+    font-family: monospace;
+    background-color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.w3-button:hover {
+    background-color: goldenrod;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 
 input[type=submit] {
     transition-duration: 0.4s;
@@ -121,7 +121,7 @@ input[type=submit]:hover {
 }
 
 .container {
-    background: #7eb4e2;
+    background: rgb(255, 95, 95);;
     background-clip: padding-box;
     border: 10px solid hsla(0,0%,100%,.5);
     margin: auto;
@@ -129,14 +129,6 @@ input[type=submit]:hover {
     padding: 10px;
 
 }
-/* 
-#comments-cont {
-    background: #7eb4e2;
-    background-clip: padding-box;
-    border: 10px solid hsla(0,0%,100%,.5);
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-} */
+
 
 

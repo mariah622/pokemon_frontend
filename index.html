@@ -9,7 +9,10 @@
 </head>
 <body>
 
-    <!-- <h1>Pokedex</h1> -->
+    <div class="header">
+        <h1>Welcome to the Pokédex!</h1>
+    </div>
+
     <div id='pokemon-form' >
         <form id='pokemon-form'>
 
@@ -67,14 +70,13 @@
 
 
 <div class="container">
-    <button class="w3-bar-item w3-button" onclick="openContainer('welcome-cont')">Welcome</button>
-    <button class="w3-bar-item w3-button" onclick="openContainer('pokemon-cont')">Pokemon</button>
-    <button class="w3-bar-item w3-button" onclick="openContainer('comments-cont')">Comments</button>
+    <button class="w3-button" onclick="openContainer('welcome-cont')">Main</button>
+    <button class="w3-button" onclick="openContainer('pokemon-cont')">Pokemon</button>
+    <button class="w3-button" onclick="openContainer('comments-cont')">Comments</button>
     
     <div id='welcome-cont' class='cont'>
-        <h1>Welcome to the Pokedex!</h1>
 
-        <p>Click above to see existing Pokemon and Comments. If you wish to make your own, type above in the provided spaces. Happy catching!</p>
+        <h4>Click above to see existing Pokemon and Comments. If you wish to make your own, type above in the provided spaces. Happy catching!</h4>
     </div>
 
     <div id='pokemon-cont' class='cont'  style="display:none">
