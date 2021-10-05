@@ -22,6 +22,15 @@ commentForm.addEventListener('submit', submitComments)
 pokemonForm.addEventListener('submit', submitPokemons)
 
 
+function openContainer(contName) {
+    var i;
+    var x = document.getElementsByClassName("cont");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    document.getElementById(contName).style.display = "block";
+  }
+
 function submitComments(e) {
     e.preventDefault();
     commentCall.createComments()
@@ -36,4 +45,5 @@ function submitPokemons(e) {
     e.preventDefault();
     pokemonCall.createPokemons()
 }
+
 

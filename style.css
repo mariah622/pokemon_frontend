@@ -2,13 +2,15 @@ body {
     background: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700156667.jpg") no-repeat center fixed;
     background-size: cover;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white
+}
 
  
 
-}
 
 
-h1 {
+
+/* h1 {
     color: white
 }
 
@@ -27,17 +29,19 @@ p {
 
 #pokemon-form {
     color: white
-}
+} */
 
 #pokemon_dropdown {
     background-color: white; /* Green */
-    border: none;
+    background-clip: padding-box;
+    border: 10px solid hsla(0,0%,100%,.5);
     color: #7eb4e2;
     padding: 10px 27px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 }
 
@@ -100,5 +104,39 @@ p {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
+
+
+input[type=submit] {
+    transition-duration: 0.4s;
+    border-radius: 12px;
+    font-family: monospace;
+    background-color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+input[type=submit]:hover {
+    background-color: goldenrod;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.container {
+    background: #7eb4e2;
+    background-clip: padding-box;
+    border: 10px solid hsla(0,0%,100%,.5);
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+
+}
+/* 
+#comments-cont {
+    background: #7eb4e2;
+    background-clip: padding-box;
+    border: 10px solid hsla(0,0%,100%,.5);
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+} */
 
 
