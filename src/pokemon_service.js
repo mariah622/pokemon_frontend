@@ -19,20 +19,6 @@ class PokemonService {
         })
     }
     
-    // getPokemons() {
-    //     fetch(this.port + `/pokemons`)
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         for(const pokemon of data){
-    //             let p = new Pokemon(pokemon)
-    //             p.attachToDom()
-    //         }
-
-    //     })
-    //     .catch()
-
-    // }
-
     createPokemons(){
         const pokemonInfo = {
             pokemon: {
@@ -53,9 +39,12 @@ class PokemonService {
         fetch(this.port + `/pokemons`, configObject)
         .then(response => response.json())
         .then(data => {
+            if(data.error) throw Error(data.error)
             const p = new Pokemon(data)
             p.attachToDom()
         })
+        .catch(error => alert(error))
+
     }
 
     updatePokemon(pokemon){
