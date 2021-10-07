@@ -36,9 +36,12 @@ class CommentService {
         fetch(this.port + `/comments`, configObject)
         .then(response => response.json())
         .then(data => {
+            if(data.error) throw Error(data.error)
+
             const c = new Comment(data)
             c.attachToDom()
         })
+        .catch(error => alert(error))
     }
 
     updateComment(comment){
