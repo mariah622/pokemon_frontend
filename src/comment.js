@@ -22,8 +22,9 @@ class Comment {
 
     render(){
         this.element.innerHTML = `
+        <h2 class="pokemon">Pokemon: ${this.pokemon.name}</h2>
         <div data-id="${this.id}">
-        <h2 class="title">${this.title}</h2>
+        <h3 class="title">${this.title}</h3>
         <p class="description">${this.description}</p>
         </div>
         <button class="edit" data-id=${this.id}>Edit Comment</button>

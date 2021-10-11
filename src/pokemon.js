@@ -20,11 +20,11 @@ class Pokemon {
     render(){
         this.element.innerHTML = `
         <div data-id="${this.id}">
-        <h2 class="name">Name: ${this.name}</h2>
+        <p class="name">${this.name}</p>
         <p class="move">Move: ${this.move}</p>
         <p class="ability">Ability: ${this.ability}</p>
         </div>
-        <button class="edit" data-id=${this.id}>Edit Pokemon</button>
+        <button class="edit" data-id=${this.id}>Edit Pokémon</button>
         <button class="delete" data-id=${this.id}> X </button>
         `
         return this.element
@@ -45,18 +45,18 @@ class Pokemon {
     }
 
     pokemonClick = (e) => {
-        if(e.target.innerText === "Edit Pokemon"){
+        if(e.target.innerText === "Edit Pokémon"){
             console.log(e.target)
-            e.target.innerText = "Save Pokemon"
+            e.target.innerText = "Save Pokémon"
             this.createEditForm()
     
             // debugger
         }else if(e.target.innerText === "X"){
             console.log(e.target)
             pokemonCall.deletePokemons(e)
-        }else if(e.target.innerText === "Save Pokemon"){
+        }else if(e.target.innerText === "Save Pokémon"){
             console.log("save works")
-            e.target.innerText = "Edit Pokemon"
+            e.target.innerText = "Edit Pokémon"
             this.updatedPokemonInfo()
 
            
