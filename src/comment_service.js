@@ -13,7 +13,7 @@ class CommentService {
                 c.attachToDom()
             }
         })
-        .catch()
+        .catch(error => window.alert("Opps! Seems like you are not connected to the server. Try again!"))
     }
 
     createComments(){

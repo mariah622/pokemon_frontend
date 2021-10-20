@@ -21,8 +21,8 @@ class Pokemon {
         this.element.innerHTML = `
         <div data-id="${this.id}">
         <p class="name">${this.name}</p>
-        <p class="move">Move: ${this.move}</p>
-        <p class="ability">Ability: ${this.ability}</p>
+        <p class="move">${this.move}</p>
+        <p class="ability">${this.ability}</p>
         </div>
         <button class="edit" data-id=${this.id}>Edit Pokémon</button>
         <button class="delete" data-id=${this.id}> X </button>
