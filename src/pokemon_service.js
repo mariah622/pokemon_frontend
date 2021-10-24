@@ -43,7 +43,7 @@ class PokemonService {
             const p = new Pokemon(data)
             p.attachToDom()
         })
-        .catch(error => alert(error))
+        .catch()
 
     }
 

@@ -14,6 +14,8 @@ const abilityValue = document.getElementById('pokemon-ability')
 const titleValue = document.getElementById('comment-title')
 const descriptionValue = document.getElementById('comment-description')
 
+
+
 commentCall.getComments()
 pokemonCall.getPokemons()
 
@@ -34,9 +36,6 @@ function openContainer(contName) {
 function submitComments(e) {
     e.preventDefault();
     commentCall.createComments()
-    // it's like an instance method
-
-
     // debugger
 
 }
@@ -45,5 +44,19 @@ function submitPokemons(e) {
     e.preventDefault();
     pokemonCall.createPokemons()
 }
+
+function Search(attribute){
+  const collection = document.getElementsByTagName("li");
+
+  for (i = 0;i < collection.length; i++){
+      if (((collection[i].innerHTML).toLowerCase()).indexOf(attribute) > -1) {
+          collection[i].style.display = "";
+          } else {
+              collection[i].style.display = "none";
+              }
+  }
+}
+
+
 
 
