@@ -3,17 +3,12 @@ const commentCall = new CommentService(port);
 const pokemonCall = new PokemonService(port);
 const commentForm = document.getElementById('comment-form')
 const pokemonForm = document.getElementById('pokemon-form')
-
 const dropDown = document.getElementById('pokemon_dropdown')
-
-
 const nameValue = document.getElementById('pokemon-name')
 const moveValue = document.getElementById('pokemon-move')
 const abilityValue = document.getElementById('pokemon-ability')
-
 const titleValue = document.getElementById('comment-title')
 const descriptionValue = document.getElementById('comment-description')
-
 
 
 commentCall.getComments()
@@ -45,17 +40,6 @@ function submitPokemons(e) {
     pokemonCall.createPokemons()
 }
 
-function Search(attribute){
-  const collection = document.getElementsByTagName("li");
-
-  for (i = 0;i < collection.length; i++){
-      if (((collection[i].innerHTML).toLowerCase()).indexOf(attribute) > -1) {
-          collection[i].style.display = "";
-          } else {
-              collection[i].style.display = "none";
-              }
-  }
-}
 
 
 

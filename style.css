@@ -106,7 +106,7 @@ body {
 }
 
 
-input[type=text] {
+input[type=submit] {
     transition-duration: 0.4s;
     border-radius: 12px;
     font-family: monospace;
@@ -114,7 +114,7 @@ input[type=text] {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-input[type=text]:hover {
+input[type=submit]:hover {
     background-color: goldenrod;
     box-shadow: 0 5px #666;
     transform: translateY(4px);

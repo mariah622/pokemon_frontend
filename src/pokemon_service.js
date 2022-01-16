@@ -2,7 +2,6 @@ class PokemonService {
     constructor(port){
         this.port = port
     }
-
     getPokemons(){
         fetch(this.port + `/pokemons`)
         .then(response => response.json())
@@ -12,8 +11,6 @@ class PokemonService {
                 // pokemon object
                 p.addToDropDown()
                 p.attachToDom()
-
-
             })
             
         })
@@ -43,6 +40,7 @@ class PokemonService {
             const p = new Pokemon(data)
             p.attachToDom()
         })
+        .catch(error => alert(error))
         .catch()
 
     }
@@ -64,20 +62,19 @@ class PokemonService {
             },
             body: JSON.stringify(pokemonInfo)
         }
-
         fetch(this.port + `/pokemons/${id}`, configObject)
         .then(response => {pokemon.render()})
         
-
     }
 
     deletePokemons(e) {
         const id = e.target.dataset.id
         e.target.parentElement.remove()
-
         fetch(this.port + `/pokemons/${id}`, {method: 'DELETE'})
         .then(response => response.json())
         .then(json => alert(json.message))
     
     }
+
+
 }
