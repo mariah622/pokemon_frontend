@@ -2,13 +2,13 @@ class PokemonService {
     constructor(port){
         this.port = port
     }
+    
     getPokemons(){
         fetch(this.port + `/pokemons`)
         .then(response => response.json())
         .then( json => {
             json.forEach(element => {
                 const p = new Pokemon(element)
-                // pokemon object
                 p.addToDropDown()
                 p.attachToDom()
             })
@@ -39,6 +39,7 @@ class PokemonService {
             if(data.error) throw Error(data.error)
             const p = new Pokemon(data)
             p.attachToDom()
+            p.addToDropDown()
         })
         .catch(error => alert(error))
         .catch()
@@ -46,7 +47,6 @@ class PokemonService {
     }
 
     updatePokemon(pokemon){
-        // destructuring (destructuring is smart. I do not have to write title: title)
         const {name, move, ability, id} = pokemon
         const pokemonInfo = {
             name, 
@@ -75,6 +75,7 @@ class PokemonService {
         .then(json => alert(json.message))
     
     }
+
 
 
 }

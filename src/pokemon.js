@@ -2,19 +2,18 @@ class Pokemon {
     static all = [];
     static poke = document.getElementById("pokemon-cont")
     constructor({name, move, ability, id}) {
-        // debugger
         this.name = name
         this.move = move
         this.ability = ability
         this.id = id
-        // this.pokemons = comments 
+ 
         this.element = document.createElement('li');
         this.element.dataset['id'] = id;
         this.element.id = `pokemon-${id}`;
         this.element.addEventListener('click', this.pokemonClick)
         
         Pokemon.all.push(this)
-
+        // debugger
     } 
 
     render(){
@@ -27,35 +26,29 @@ class Pokemon {
         <button class="edit" data-id=${this.id}>Edit Pokémon</button>
         <button class="delete" data-id=${this.id}> X </button>
         `
+        // debugger
         return this.element
     }
 
     createEditForm(){
         const div = this.element.querySelector('div');
+     
         for(const element of div.children){
             let inputValue = element.innerText;
             let name = element.classList[0];
+            debugger
             element.outerHTML = `<input type="text" class="edit-${name}" value="${inputValue}" />`
-             // iterate with a loop through the div to replace every one with a specific comment form
+    
         }
-
-        // debugger
-
-
     }
 
     pokemonClick = (e) => {
         if(e.target.innerText === "Edit Pokémon"){
-            console.log(e.target)
             e.target.innerText = "Save Pokémon"
             this.createEditForm()
-    
-            // debugger
         }else if(e.target.innerText === "X"){
-            console.log(e.target)
             pokemonCall.deletePokemons(e)
         }else if(e.target.innerText === "Save Pokémon"){
-            console.log("save works")
             e.target.innerText = "Edit Pokémon"
             this.updatedPokemonInfo()
 
@@ -83,11 +76,10 @@ class Pokemon {
         dropDown.appendChild(option)
     }
 
-
-
-
+   
     
 
+    
 
 
 

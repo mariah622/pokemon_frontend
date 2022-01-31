@@ -1,5 +1,4 @@
 class Comment {
-    // if i do not use pokemon object, get rid of it please lol
     static all = [];
     static cont = document.getElementById("comments-cont")
 
@@ -9,14 +8,12 @@ class Comment {
         this.title = title
         this.pokemon_id = pokemon_id
         this.pokemon = pokemon
+        
         this.element = document.createElement('li');
         this.element.dataset['id'] = id;
         this.element.id = `comment-${id}`;
         this.element.addEventListener('click', this.handleClick)
-        // setting up dataset
 
-
-    
         Comment.all.push(this)
     }
 
@@ -39,10 +36,9 @@ class Comment {
             let inputValue = element.innerText;
             let name = element.classList[0];
             element.outerHTML = `<input type="text" class="edit-${name}" value="${inputValue}" />`
-             // iterate with a loop through the div to replace every one with a specific comment form
         }
 
-        // debugger
+       
 
 
     }
@@ -53,10 +49,10 @@ class Comment {
             e.target.innerText = "Save Comment"
             this.createEditForm()
     
-            // debugger
         }else if(e.target.innerText === "X"){
             console.log(e.target)
             commentCall.deleteComment(e)
+            
         }else if(e.target.innerText === "Save Comment"){
             console.log("save works")
             e.target.innerText = "Edit Comment"
@@ -77,7 +73,6 @@ class Comment {
         Comment.cont.appendChild(this.render())
     }
    
-    // Constructor : we will use this to make new comments. yay
     
 
 

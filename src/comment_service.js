@@ -17,6 +17,7 @@ class CommentService {
     }
 
     createComments(){
+
         const commentInfo = {
             comment: {
                 title: titleValue.value,
@@ -24,7 +25,6 @@ class CommentService {
                 pokemon_id: dropDown.value
             }
         }
-        // debugger
         const configObject = {
             method: 'POST',
             headers: {
@@ -45,7 +45,6 @@ class CommentService {
     }
 
     updateComment(comment){
-        // destructuring (destructuring is smart. I do not have to write title: title)
         const {title, description, id} = comment
         const commentInfo = {
             title, 

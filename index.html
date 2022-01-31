@@ -13,14 +13,10 @@
         <h1>Welcome to the Pokédex!</h1>
     </div>
 
-
-
-
-
     <div id='pokemon-form' >
 
       
-        <form id='pokemon-form'>
+        <form id='pokemon-form' >
 
 
             <h1>Create Pokémon:</h1>
@@ -55,7 +51,7 @@
             <h1>Create Comment:</h1>
 
             <label for="comment-title">Title:</label>
-            <input type='text' name='title' id='comment-title'/>
+            <input type='text' name='title' id='comment-title' />
             <br>
             <label for="comment-description">Description:</label>
             <input type='text' name='description' id='comment-description' />
@@ -74,23 +70,23 @@
 
 
 <div class="container">
-    <button class="w3-button" onclick="openContainer('welcome-cont')">Main</button>
-    <button class="w3-button" onclick="openContainer('pokemon-cont')">Pokémon</button>
-    <button class="w3-button" onclick="openContainer('comments-cont')">Comments</button>
+    <div class='button-cont'>
+        <button class="button" id='button1'>Main</button>
+        <button class="button" id='button2'>Pokémon</button>
+        <button class="button" id='button3'>Comments</button>
+
+    </div>
+    
     
     <div id='welcome-cont' class='cont'>
 
         <h4>Click above to see existing Pokémon and Comments. If you wish to make your own, type above in the provided spaces. Happy catching!</h4>
     </div>
-
-    <div id='pokemon-cont' class='cont'  style="display:none">
-
-
-        
-        <h1>Pokémon:</h1>
-        
+   
+    <div id='pokemon-cont' class='poke-cont'  >
+        <h1>Pokémon:</h1>    
     </div>
-    <div id="comments-cont" class='cont'  style="display:none">
+    <div id="comments-cont" class='com-cont'  >
         <h1>Comments:</h1>
     </div>
   </div>
@@ -103,8 +99,6 @@
     <script src='src/pokemon.js'></script>
     <script src='src/pokemon_service.js'></script>
     <script src='index.js'></script>
-
-    
     
 </body>
 </html>

@@ -91,7 +91,7 @@ body {
     transform: translateY(4px);
 }
 
-.w3-button {
+.button {
     transition-duration: 0.4s;
     border-radius: 12px;
     font-family: monospace;
@@ -99,7 +99,7 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.w3-button:hover {
+.button:hover {
     background-color: goldenrod;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
@@ -130,5 +130,21 @@ input[type=submit]:hover {
 
 }
 
+.poke-cont {
+    display: none;
+
+}
+
+.com-cont{
+    display: none;
+}
+
+/* .cont {
+    display: none;
+}
+
+.const.show {
+    display: block;
+} */
 
 
