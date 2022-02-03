@@ -79,6 +79,7 @@ class Pokemon {
                     const comment = comments[i]
                     comment.attachToDom()
                 }
+                
             })
         } 
     }

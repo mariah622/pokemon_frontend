@@ -12,8 +12,8 @@ const descriptionValue = document.getElementById('comment-description')
 
 
 const welcomeCont = document.getElementById('welcome-cont')
-const pokemonCont = document.getElementById('pokemon-cont')
-const commentCont = document.getElementById('comments-cont')
+const pokemonCont = document.getElementById('p-cont')
+const commentCont = document.getElementById('c-cont')
 
 commentCall.getComments()
 pokemonCall.getPokemons()

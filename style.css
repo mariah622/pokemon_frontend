@@ -91,6 +91,25 @@ body {
     transform: translateY(4px);
 }
 
+.pokecomments {
+    transition-duration: 0.4s;
+    border-radius: 12px;
+    font-family: monospace;
+    background-color: #8bc6fa;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.pokecomments:hover {
+    background-color: #588dbb;
+    color: black;
+}
+
+.pokecomments:active {
+    background-color: #7eb4e2;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 .button {
     transition-duration: 0.4s;
     border-radius: 12px;
@@ -142,7 +161,7 @@ input[type=reset]:hover {
     padding: 10px;
 
 }
-
+ 
 .poke-cont {
     display: none;
 
@@ -152,12 +171,5 @@ input[type=reset]:hover {
     display: none;
 }
 
-/* .cont {
-    display: none;
-}
-
-.const.show {
-    display: block;
-} */
 
 
