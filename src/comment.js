@@ -19,7 +19,8 @@ class Comment {
 
     render(){
         this.element.innerHTML = `
-        <h2 class="pokemon">Pokemon: ${this.pokemon.name}</h2>
+
+        <h2 class="pokemon">${this.pokemon.name}</h2>
         <div data-id="${this.id}">
         <h3 class="title">${this.title}</h3>
         <p class="description">${this.description}</p>
@@ -37,10 +38,6 @@ class Comment {
             let name = element.classList[0];
             element.outerHTML = `<input type="text" class="edit-${name}" value="${inputValue}" />`
         }
-
-       
-
-
     }
 
     handleClick = (e) => {

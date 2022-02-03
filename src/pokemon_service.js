@@ -6,11 +6,13 @@ class PokemonService {
     getPokemons(){
         fetch(this.port + `/pokemons`)
         .then(response => response.json())
-        .then( json => {
-            json.forEach(element => {
+        .then(data=> {
+            data.forEach(element => {
                 const p = new Pokemon(element)
                 p.addToDropDown()
                 p.attachToDom()
+
+               
             })
             
         })
@@ -33,6 +35,7 @@ class PokemonService {
             },
             body: JSON.stringify(pokemonInfo)
         }
+
         fetch(this.port + `/pokemons`, configObject)
         .then(response => response.json())
         .then(data => {
@@ -40,6 +43,7 @@ class PokemonService {
             const p = new Pokemon(data)
             p.attachToDom()
             p.addToDropDown()
+    
         })
         .catch(error => alert(error))
         .catch()
@@ -63,7 +67,9 @@ class PokemonService {
             body: JSON.stringify(pokemonInfo)
         }
         fetch(this.port + `/pokemons/${id}`, configObject)
-        .then(response => {pokemon.render()})
+        .then(response => {
+            pokemon.render()
+        })
         
     }
 

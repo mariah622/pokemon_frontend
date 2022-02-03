@@ -25,8 +25,8 @@ class Pokemon {
         </div>
         <button class="edit" data-id=${this.id}>Edit Pokémon</button>
         <button class="delete" data-id=${this.id}> X </button>
+        <button class='pokecomments' data-id=${this.id}> Pokemon's comments</button>
         `
-        // debugger
         return this.element
     }
 
@@ -36,7 +36,6 @@ class Pokemon {
         for(const element of div.children){
             let inputValue = element.innerText;
             let name = element.classList[0];
-            debugger
             element.outerHTML = `<input type="text" class="edit-${name}" value="${inputValue}" />`
     
         }
@@ -53,7 +52,35 @@ class Pokemon {
             this.updatedPokemonInfo()
 
            
-        }
+        } else if(e.target.innerText === "Pokemon's comments"){
+            welcomeCont.style.display = 'block'
+            pokemonCont.style.display = 'none'
+            commentCont.style.display = 'block'
+            
+            let filteredComments = Comment.all.filter(comment => {
+        
+                const id = e.target.dataset.id
+                return parseInt(id) === comment.pokemon_id 
+            })
+            
+            Comment.cont.innerHTML = ''
+            
+            for(const com of filteredComments){
+                // console.log(com)
+                com.attachToDom()
+            } 
+
+            const button = document.getElementById('button3')
+
+            button.addEventListener('click', (e) => {
+                const comments = Comment.all
+
+                for(let i=0; i < comments.length; i++){
+                    const comment = comments[i]
+                    comment.attachToDom()
+                }
+            })
+        } 
     }
 
     updatedPokemonInfo() {
@@ -75,6 +102,9 @@ class Pokemon {
         option.innerHTML = this.name
         dropDown.appendChild(option)
     }
+
+
+
 
    
     

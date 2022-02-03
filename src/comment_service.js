@@ -48,7 +48,8 @@ class CommentService {
         const {title, description, id} = comment
         const commentInfo = {
             title, 
-            description
+            description,
+
         }
         
         const configObject = {
@@ -61,7 +62,9 @@ class CommentService {
         }
 
         fetch(this.port + `/comments/${id}`, configObject)
-        .then(response => {comment.render()})
+        .then(response => {
+            comment.render()
+        })
         
 
     }

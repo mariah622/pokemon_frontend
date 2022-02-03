@@ -119,6 +119,19 @@ input[type=submit]:hover {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
+input[type=reset] {
+    transition-duration: 0.4s;
+    border-radius: 12px;
+    font-family: monospace;
+    background-color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+input[type=reset]:hover {
+    background-color: goldenrod;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
 
 .container {
     background: rgb(255, 95, 95);;

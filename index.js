@@ -10,10 +10,27 @@ const abilityValue = document.getElementById('pokemon-ability')
 const titleValue = document.getElementById('comment-title')
 const descriptionValue = document.getElementById('comment-description')
 
-const allPokemon = Pokemon.all
-const pokemonNames = allPokemon.map( pokemon => `${pokemon.name}`)
 
+const welcomeCont = document.getElementById('welcome-cont')
+const pokemonCont = document.getElementById('pokemon-cont')
+const commentCont = document.getElementById('comments-cont')
 
+commentCall.getComments()
+pokemonCall.getPokemons()
+
+commentForm.addEventListener('submit', submitComments)
+pokemonForm.addEventListener('submit', submitPokemons)
+
+function submitComments(e) {
+  e.preventDefault();
+  commentCall.createComments()
+
+}
+
+function submitPokemons(e) {
+  e.preventDefault();
+  pokemonCall.createPokemons()
+}
 
 // const buttons = document.querySelectorAll( "button" );
 
@@ -24,33 +41,10 @@ const pokemonNames = allPokemon.map( pokemon => `${pokemon.name}`)
 // }
 // buttonIteration()
 
-commentCall.getComments()
-pokemonCall.getPokemons()
-
-commentForm.addEventListener('submit', submitComments)
-pokemonForm.addEventListener('submit', submitPokemons)
-
-function submitComments(e) {
-    e.preventDefault();
-    commentCall.createComments()
-
-}
-
-function submitPokemons(e) {
-  console.log(e)
-    e.preventDefault();
-    pokemonCall.createPokemons()
-}
-
 const buttons = document.querySelector('.button-cont')
 buttons.addEventListener('click', buttonHit)
 
-function buttonHit(e){
-  console.log('i was pressed')
-  const welcomeCont = document.getElementById('welcome-cont')
-  const pokemonCont = document.getElementById('pokemon-cont')
-  const commentCont = document.getElementById('comments-cont')
-  
+function buttonHit(e){ 
   if(e.target.innerText === "Main"){
     welcomeCont.style.display = 'block'
     pokemonCont.style.display = 'none'
@@ -72,15 +66,3 @@ function buttonHit(e){
 
   }
 }
-
-
-  
-
-
-
-
-
-  
-
-
-      
